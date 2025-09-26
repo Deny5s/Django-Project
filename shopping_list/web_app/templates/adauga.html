@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Adauga produs</h2>
+
+<form method="post">
+  {% csrf_token %}  
+  <p>
+    <label for="id_name">Nume produs:</label>
+    <input type="text" name="name" id="id_name" required>
+  </p>
+
+  <button type="submit">Salveaza</button>
+</form>
+
+<a href="{% url 'home' %}">⟵ Inapoi la lista</a>
+{% endblock %}

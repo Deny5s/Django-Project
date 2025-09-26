@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Lista de cumparaturi</h2>
+<ul>
+  {% for product in products %}
+    <li class="{% if product.bought %}bought{% endif %}">
+      {{ product.name }}
+      {% if not product.bought %}
+        <a href="{% url 'marcheaza' product.id %}">✔</a>
+      {% endif %}
+      <a href="{% url 'sterge' product.id %}">✖</a>
+    </li>
+  {% empty %}
+    <li>Nu exista produse in lista.</li>
+  {% endfor %}
+</ul>
+<a href="{% url 'adauga' %}">+ Adauga produs</a>
+{% endblock %}
