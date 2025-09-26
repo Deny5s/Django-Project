@@ -12,6 +12,6 @@ A simple web application to manage your shopping list. Add items, mark them as p
 - Mark as purchased – Toggle an item’s status to indicate it has been bough
   
 🧰 Technologies Used
-- Frontend: HTML, CSS, JavaScript (or specify your framework: React, Vue, etc.)
-- Backend: Python with Flask (or Django, Node.js, etc.)
-- Storage: Local file / SQLite / other database (specify what you use
+- Frontend: HTML, CSS
+- Backend: Python with Django
+- Storage: Local file / SQLite
